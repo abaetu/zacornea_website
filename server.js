@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
@@ -11,7 +11,7 @@ var express = require('express')
 var app = express();
 app.use(express.compress());
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -36,6 +36,6 @@ app.get('/intrebari', routes.intrebari);
 
 
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), ipaddress, function(){
   console.log("Express server listening on port " + app.get('port'));
 });
