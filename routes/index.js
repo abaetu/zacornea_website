@@ -33,10 +33,11 @@ exports.contact = function(req,res){
 exports.legislatie = function(req,res){
   data.page = 'legislatie';
 	data.laws = [];
-	data.laws.push({ name: 'LEGEA NR. 7/1996 - legea cadastrului si a publicitatii imobiliare (126)', link : 'http://www.cadastruiniasi.ro/wp-content/plugins/download-monitor/download.php?id=12' });
-	data.laws.push({ name: 'ORDIN NR. 634/2006 - pentru aprobarea Regulamentului privind continutul si modul de intocmire a documentatiilor cadastrale in vederea inscrierii in cartea funciara (93)', link : 'http://www.cadastruiniasi.ro/wp-content/plugins/download-monitor/download.php?id=13' });
-	data.laws.push({ name: 'LEGEA NR. 247/2005 - privind reforma in domeniile proprietatii si justitiei, precum si unele masuri adiacente (106)', link : 'http://www.cadastruiniasi.ro/wp-content/plugins/download-monitor/download.php?id=14' });
-	data.laws.push({ name: 'LEGEA NR. 18/1991 - legea fondului funciar (89)', link : 'http://www.cadastruiniasi.ro/wp-content/plugins/download-monitor/download.php?id=15' });
+	data.laws.push({ name: 'LEGEA NR. 7/1996 - legea cadastrului si a publicitatii imobiliare', link : 'http://www.ancpi.ro/images/legislatie/Legea_nr_7_1996_2015.docx' });
+	data.laws.push({ name: 'ORDIN NR. 634/2006 - pentru aprobarea Regulamentului privind continutul si modul de intocmire a documentatiilor cadastrale in vederea inscrierii in cartea funciara', link : 'http://www.ancpi.ro/images/legislatie/ordin_nr._634_din_2006.pdf' });
+	data.laws.push({ name: 'LEGEA NR. 247/2005 - privind reforma in domeniile proprietatii si justitiei, precum si unele masuri adiacente', link : 'http://www.ancpi.ro/images/legislatie/legea_247_2005_legi.pdf' });
+	data.laws.push({ name: 'LEGEA NR. 18/1991 - legea fondului funciar', link : 'http://www.ancpi.ro/images/legislatie/lege_nr._18_din_1991.pdf' });
+	data.laws.push({ name: 'LEGEA NR. 544/2001', link : 'http://www.ancpi.ro/images/legislatie/Legea_544.pdf' });
   res.render('legislatie', data );
 }
 
